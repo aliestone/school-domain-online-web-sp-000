@@ -15,6 +15,7 @@ class School
     roster.each do |grade, students|
       students.sort!
     end
+    return roster 
   end
 
   def add_student(student, grade)
