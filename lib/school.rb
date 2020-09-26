@@ -12,6 +12,13 @@ class School
   end
 
   def sort
+    roster.each do |grade, students|
+      students.sort!
+    end
+    return roster
+  end
+
+  def sort
     roster_copy = {}
     roster.each do |grade, students|
       roster_copy[grade]= students.sort
