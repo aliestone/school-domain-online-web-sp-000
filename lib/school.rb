@@ -31,6 +31,6 @@ class School
       roster[grade]= []
     end
     roster[grade] << student
-    self.sort_in_place()
+    self.sort
   end
 end
