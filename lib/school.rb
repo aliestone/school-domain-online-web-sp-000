@@ -11,13 +11,6 @@ class School
     return roster[grade] ? roster[grade]: []
   end
 
-  def sort_in_place
-    roster.each do |grade, students|
-      students.sort!
-    end
-    return roster
-  end
-
   def sort
     roster_copy = {}
     roster.each do |grade, students|
@@ -31,6 +24,5 @@ class School
       roster[grade]= []
     end
     roster[grade] << student
-    self.sort
   end
 end
