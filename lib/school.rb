@@ -11,7 +11,7 @@ class School
     return roster[grade] ? roster[grade]: []
   end
 
-  def sort
+  def sort_in_place
     roster.each do |grade, students|
       students.sort!
     end
@@ -31,5 +31,6 @@ class School
       roster[grade]= []
     end
     roster[grade] << student
+    self.sort_in_place()
   end
 end
