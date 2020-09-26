@@ -12,10 +12,11 @@ class School
   end
 
   def sort
+    roster_copy = {}
     roster.each do |grade, students|
-      students.sort
+      roster_copy[grade]= students.sort
     end
-    return roster
+    return roster_copy
   end
 
   def add_student(student, grade)
